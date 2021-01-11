@@ -10,13 +10,21 @@
 <body>
     <div id="app">
         <ul>
+        
+                <input type="radio"  id="rated" name="priority" value="high" v-model="picked">
+                <label for="high">High priority</label>
+            
+                <input type="radio"  name="priority" value="low" v-model="picked" >
+                <label for="low">Low priority</label>
+        
+
             <form v-on:submit.prevent = "saveNewItem">
                 <input type="text" v-model="newItem" />
                 <button>Save item</button>
             </form>
             
-            <li v-for="banana in todos">
-                <span>{{ banana }}</span>
+            <li v-for="banan in todos">
+                <span>{{ banan.do }}</span>
             </li>
         </ul>
     </div>
