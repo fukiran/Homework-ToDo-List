@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         el:"#app",
         data: {
             todos: [
-                {do: "Buy shopping", highPriority: "low"}, 
-                {do: "Clean bathroom", highPriority: "low"},
-                {do: "Car's MOT", highPriority: "high"}
+                {do: "Buy shopping", priority: "1"}, 
+                {do: "Clean bathroom", priority: "1"},
+                {do: "Car's MOT", priority: null }
             ],
 
             newItem: "",
@@ -15,11 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         methods: {
             saveNewItem: function (){
-                this.todos.push({do: this.newItem, picked: this.picked});
+                this.todos.push({do: this.newItem, priority: this.picked});
                 this.newItem = "";
             },
             
+        
+            
         },
+        
          
         
     });
