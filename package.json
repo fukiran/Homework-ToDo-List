@@ -1,0 +1,15 @@
+{
+  
+  "scripts": {
+  "build": "webpack -w"
+},
+
+
+
+  "dependencies": {
+    "vue": "^2.6.12",
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
+  }
+}
+
