@@ -10,6 +10,10 @@
 <body>
     <div id="app">
         <ul>
+            <form v-on:submit.prevent = "saveNewItem">
+                <input type="text" v-model="newItem" />
+                <button>Save item</button>
+            </form>
             
             <li v-for="banana in todos">
                 <span>{{ banana }}</span>
